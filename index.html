@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>: : Sign Up : :</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body class="new">
+
+    <div class="outer">
+        <div class="inner">
+            <header>
+                <h1> Sign Up</h1>
+                <p>it will take only 30 sec</p>
+            </header>
+            <hr>
+            <main>
+                <form action="#">
+
+                    <p>
+                        <label for="first"> <b> First Name </b></label>
+                        <input type="text" name="fisrt" id="first" placeholder="Sushant" required>
+                    </p>
+
+                    <p>
+                        <label for="last"> <b> Last Name </b></label>
+                        <input type="text" name="last" id=lastt" placeholder="Hakare" required>
+                    </p>
+
+                    <p>
+                        <label for="email"> <b> Email </b></label>
+                        <input type="email" name="fisrt" id="email" placeholder="Sushant28022002@gmail.com" required>
+                    </p>
+
+                    <p>
+                        <label for="pass"> <b> Password </b></label>
+                        <input type="password" name="fisrt" id="first" placeholder="at least 8 charecters" required>
+                    </p>
+
+                    <hr>
+                    
+                    <p>
+                        <button id="btn"> Create Account</button>
+                    </p>
+
+                </form>
+
+            </main>
+        </div>
+
+    </div>
+    <div class="c c1"></div>
+    <div class="c c2"></div>
+    <div class="c c3"></div>
+    <div class="c c4"></div>
+    <div class="c c5"></div>
+    <div class="c c6"></div>
+
+    <script>
+
+        var timer1 = setInterval(increaseFontSize, 100);
+        var timer2;
+        let fsize = 10;
+
+        function increaseFontSize() {
+            let title_0 = document.getElementsByClassName("c")
+            fsize = fsize + 2;
+            title_0.setAttribute("style", "width : " + fsize + "px ; height : " + fsize + "px ;")
+            if (fsize > 1000) {
+                clearInterval(timer1)
+                timer2 = setInterval(decreaseFontSize, 100)
+
+            }
+        }
+
+        function decreaseFontSize() {
+            let title_0 = document.getElementsByClassName("c")
+            fsize = fsize - 2;
+            title_0.setAttribute("style", "width : " + fsize + "px ; height : " + fsize + "px ;")
+            if (fsize < 10) {
+                clearInterval(timer2)
+                timer1 = setInterval(increaseFontSize, 100)
+            }
+        }
+    </script>
+</body>
+
+</html>
